@@ -8,7 +8,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
-
 import mbn.org.mathviz.R;
 
 
@@ -16,7 +15,7 @@ import mbn.org.mathviz.R;
  * Created by basit on 31/1/18.
  */
 
-public class ContentsFragment extends Fragment implements View.OnClickListener {
+public class ContentsFragment extends Fragment {
 
 
     FrameLayout algebraContainer, geometryContainer;
@@ -32,7 +31,6 @@ public class ContentsFragment extends Fragment implements View.OnClickListener {
 //        cardGeometry = v.findViewById(R.id.card_geometry);
         algebraContainer = v.findViewById(R.id.algebraContainer);
         geometryContainer = v.findViewById(R.id.geometryContainer);
-        algebraContainer.setOnClickListener(this);
         algebraMain = new AlgebraMainFragment();
         geometryMain = new GeometryMainFragment();
         FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
