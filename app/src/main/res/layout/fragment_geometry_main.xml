@@ -26,40 +26,9 @@
             android:layout_alignParentTop="true"
             android:adjustViewBounds="true"
             android:scaleType="centerCrop"
-            card_view:srcCompat="@drawable/material_design_2" />
+            card_view:srcCompat="@drawable/geometry" />
 
-        <TextView
-            android:id="@+id/txtGeometryDef"
-            style="@style/TextAppearance.AppCompat.Large"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/img_geometry"
-            android:layout_marginEnd="@dimen/card_title_margin"
-            android:layout_marginStart="@dimen/card_title_margin"
-            android:layout_marginTop="@dimen/card_title_margin_top"
-            android:text="Geometry" />
 
-        <TextView
-            android:id="@+id/txtGeometryExp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/txtGeometryDef"
-            android:layout_marginBottom="@dimen/card_subtitle_margin"
-            android:layout_marginEnd="@dimen/card_subtitle_margin"
-            android:layout_marginStart="@dimen/card_subtitle_margin"
-            android:layout_marginTop="@dimen/card_button_margin"
-            android:text="The mathematica visualization is a type of game that is played and played again and again" />
-
-        <Button
-            android:id="@+id/btnGeometry"
-            style="@style/Widget.AppCompat.Button.Borderless"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_below="@id/txtGeometryExp"
-            android:layout_margin="@dimen/card_button_margin"
-            android:text="More info..."
-            android:textColor="@color/colorAccent" />
 
     </RelativeLayout>
 </android.support.v7.widget.CardView>

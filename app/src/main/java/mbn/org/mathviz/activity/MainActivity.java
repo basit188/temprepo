@@ -1,5 +1,6 @@
 package mbn.org.mathviz.activity;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
