@@ -12,7 +12,7 @@ import mbn.org.mathviz.R;
  * Created by basit on 1/2/18.
  */
 
-public class AlgebraFragment extends Fragment {
+public class AlgebraFragment extends Fragment{
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_algebra,container,false);
         return v;
