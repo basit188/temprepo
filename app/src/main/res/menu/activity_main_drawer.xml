@@ -8,7 +8,28 @@
         <item
             android:id="@+id/nav_algebra"
             android:icon="@android:drawable/ic_input_add"
-            android:title="Algebra" />
+            android:title="Algebra">
+
+
+        <menu>
+            <item
+                android:id="@+id/nav_Arthemetic_operations"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Arthemetic Operations" />
+            <item
+                android:id="@+id/nav_evolution_of_numbers"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Evolution of Numbers" />
+            <item
+                android:id="@+id/nav_special_numbers"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Special Numbers" />
+            <item
+                android:id="@+id/nav_other_concepts"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Other Concepts" />
+        </menu>
+    </item>
         <item
             android:id="@+id/nav_geometry"
             android:icon="@android:drawable/title_bar"

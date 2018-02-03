@@ -9,6 +9,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_weight="1"
+    android:layout_marginTop="@dimen/activity_horizontal_margin"
     android:foreground="?attr/selectableItemBackground"
     android:background="?attr/selectableItemBackground"
     >
@@ -37,20 +38,20 @@
                     android:layout_height="match_parent">
 
                     <ImageView
-                        android:id="@+id/imgArithmeticOperations"
+                        android:id="@+id/imgAddition"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:adjustViewBounds="true"
                         android:contentDescription="ArithmeticOperations"
-                        card_view:srcCompat="@drawable/add_card" />
+                        card_view:srcCompat="@drawable/arthemetic" />
 
                     <TextView
                         android:id="@+id/txtArithmeticOperations"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_alignBottom="@+id/imgArithmeticOperations"
+                        android:layout_alignBottom="@+id/imgAddition"
                         android:layout_alignParentBottom="false"
-                        android:layout_alignTop="@+id/imgArithmeticOperations"
+                        android:layout_alignTop="@+id/imgAddition"
                         android:gravity="center"
                         android:paddingLeft="8dp"
                         android:paddingRight="8dp"
@@ -79,19 +80,19 @@
                     android:layout_height="match_parent">
 
                     <ImageView
-                        android:id="@+id/imgEvolutionOfNumbers"
+                        android:id="@+id/imgSubtraction"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:adjustViewBounds="true"
                         android:contentDescription="Evolution Of Numbers"
-                        android:src="@drawable/add_card" />
+                        android:src="@drawable/evolution_of_numbers" />
 
                     <TextView
                         android:id="@+id/txtEvolutionOfNumbers"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_alignBottom="@+id/imgEvolutionOfNumbers"
-                        android:layout_alignTop="@+id/imgEvolutionOfNumbers"
+                        android:layout_alignBottom="@+id/imgSubtraction"
+                        android:layout_alignTop="@+id/imgSubtraction"
                         android:gravity="center"
                         android:paddingLeft="8dp"
                         android:paddingRight="8dp"
@@ -125,19 +126,19 @@
                     android:layout_height="match_parent">
 
                     <ImageView
-                        android:id="@+id/imgSpecialNumbers"
+                        android:id="@+id/imgMultiplication"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:adjustViewBounds="true"
                         android:contentDescription="SpecialNumbers"
-                        card_view:srcCompat="@drawable/add_card" />
+                        card_view:srcCompat="@drawable/special_numbers" />
 
                     <TextView
                         android:id="@+id/txtSpecialNumbers"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_alignBottom="@+id/imgSpecialNumbers"
-                        android:layout_alignTop="@+id/imgSpecialNumbers"
+                        android:layout_alignBottom="@+id/imgMultiplication"
+                        android:layout_alignTop="@+id/imgMultiplication"
                         android:gravity="center"
 
                         android:paddingLeft="8dp"
@@ -167,19 +168,19 @@
                     android:layout_height="match_parent">
 
                     <ImageView
-                        android:id="@+id/imgOtherConcepts"
+                        android:id="@+id/imgDivision"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:adjustViewBounds="true"
                         android:contentDescription="OtherConcepts"
-                        android:src="@drawable/add_card" />
+                        android:src="@drawable/other_concepts" />
 
                     <TextView
                         android:id="@+id/txtOtherConcepts"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_alignBottom="@+id/imgOtherConcepts"
-                        android:layout_alignTop="@+id/imgOtherConcepts"
+                        android:layout_alignBottom="@+id/imgDivision"
+                        android:layout_alignTop="@+id/imgDivision"
                         android:gravity="center"
                         android:paddingLeft="8dp"
                         android:paddingRight="8dp"
