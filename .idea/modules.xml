@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/MathViz.iml" filepath="$PROJECT_DIR$/MathViz.iml" />
       <module fileurl="file://C:\Users\MAK\Desktop\projects\temprepo2\MathViz.iml" filepath="C:\Users\MAK\Desktop\projects\temprepo2\MathViz.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://C:\Users\MAK\Desktop\projects\temprepo2\app\app.iml" filepath="C:\Users\MAK\Desktop\projects\temprepo2\app\app.iml" />
