@@ -1,300 +1,260 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="?attr/selectableItemBackgroundBorderless"
-    android:orientation="vertical">
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-    <android.support.v7.widget.CardView
-        android:id="@+id/card_dialog_arthemetic_operations"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        app:cardCornerRadius="0dp"
-        app:cardElevation="2dp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:id="@+id/img_dialog_fullscreen_close"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginLeft="12dp"
-                android:layout_marginStart="12dp"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                android:clickable="true"
-                android:padding="4dp"
-                app:srcCompat="@android:drawable/ic_menu_close_clear_cancel" />
-
-            <TextView
-                style="@style/Base.DialogWindowTitle.AppCompat"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginLeft="16dp"
-                android:layout_marginStart="16dp"
-                android:text="Arthemetic Operations" />
-        </LinearLayout>
-
-    </android.support.v7.widget.CardView>
-
-
-    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:card_view="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:id="@+id/card_arthemetic"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="@dimen/activity_horizontal_margin"
-        android:layout_weight="1"
-        android:background="?attr/selectableItemBackground"
-        android:foreground="?attr/selectableItemBackground"
-        tools:ignore="HardcodedText">
+        android:orientation="vertical">
 
-        <TableLayout
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/card_dialog_arthemetic_operations"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="?attr/actionBarSize"
+            app:cardCornerRadius="0dp"
+            app:cardElevation="2dp">
 
-            <TableRow
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_dialog_fullscreen_close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginStart="12dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:padding="4dp"
+                    app:srcCompat="@android:drawable/ic_menu_close_clear_cancel" />
+
+                <TextView
+                    style="@style/Base.DialogWindowTitle.AppCompat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp"
+                    android:text="Arthemetic Operations" />
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/card_arthemetic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:foreground="?attr/selectableItemBackground"
+            tools:ignore="HardcodedText">
+
+            <TableLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <android.support.v7.widget.CardView
-                    android:id="@+id/cardAddition"
+                <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="?attr/selectableItemBackground"
-                    android:foreground="?attr/selectableItemBackground"
-                    card_view:cardCornerRadius="@dimen/card_recycler_corner_radius"
-                    card_view:cardElevation="@dimen/card_recycler_elevation"
-                    card_view:cardUseCompatPadding="true">
+                    android:layout_height="match_parent">
 
-                    <RelativeLayout
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/cardAddition"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="?attr/selectableItemBackground"
+                        android:foreground="?attr/selectableItemBackground"
+                        card_view:cardCornerRadius="@dimen/card_recycler_corner_radius"
+                        card_view:cardElevation="@dimen/card_recycler_elevation"
+                        card_view:cardUseCompatPadding="true">
 
-                        <ImageView
-                            android:id="@+id/imgAddition"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:adjustViewBounds="true"
-                            android:contentDescription="ArithmeticOperations"
-                            card_view:srcCompat="@drawable/add_card" />
-
-                        <TextView
-                            android:id="@+id/txtplussign"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentTop="true"
-                            android:layout_centerHorizontal="true"
-                            android:gravity="center"
-                            android:text="+"
-                            android:textColor="@color/cardview_light_background"
-                            android:textSize="150sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/txtaddition"
+                        <RelativeLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_alignBottom="@+id/imgAddition"
-                            android:layout_alignParentBottom="false"
-                            android:layout_alignTop="@+id/imgAddition"
-                            android:gravity="bottom"
-                            android:paddingLeft="8dp"
-                            android:paddingRight="8dp"
-                            android:text="Addition"
-                            android:textAllCaps="true"
-                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-                            android:textColor="#FFF"
-                            android:textStyle="bold" />
+                            android:layout_height="match_parent">
 
-                    </RelativeLayout>
+                            <ImageView
+                                android:id="@+id/imgAddition"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:adjustViewBounds="true"
+                                android:contentDescription="ArithmeticOperations"
+                                card_view:srcCompat="@drawable/add_card" />
 
-                </android.support.v7.widget.CardView>
+                            <TextView
+                                android:id="@+id/txtaddition"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignBottom="@+id/imgAddition"
+                                android:layout_alignParentBottom="false"
+                                android:layout_alignTop="@+id/imgAddition"
+                                android:layout_marginBottom="4dp"
+                                android:gravity="bottom"
+                                android:paddingLeft="8dp"
+                                android:paddingRight="8dp"
+                                android:text="Addition"
+                                android:textAllCaps="true"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                                android:textColor="#FFF"
+                                android:textStyle="bold" />
 
-                <android.support.v7.widget.CardView
-                    android:id="@+id/cardSubtraction"
+                        </RelativeLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/cardSubtraction"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="?attr/selectableItemBackground"
+                        android:foreground="?attr/selectableItemBackground"
+                        card_view:cardCornerRadius="@dimen/card_recycler_corner_radius"
+                        card_view:cardElevation="@dimen/card_recycler_elevation"
+                        card_view:cardUseCompatPadding="true">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/imgSubtraction"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:adjustViewBounds="true"
+                                android:contentDescription="subtraction"
+                                android:src="@drawable/minus_card" />
+
+                            <TextView
+                                android:id="@+id/txtSubtraction"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignBottom="@+id/imgSubtraction"
+                                android:layout_alignTop="@+id/imgSubtraction"
+                                android:layout_marginBottom="4dp"
+                                android:gravity="left|bottom"
+                                android:paddingLeft="8dp"
+                                android:paddingRight="8dp"
+                                android:text="Subtraction"
+                                android:textAllCaps="true"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                                android:textColor="#FFF"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                    </android.support.v7.widget.CardView>
+                </TableRow>
+
+                <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="?attr/selectableItemBackground"
-                    android:foreground="?attr/selectableItemBackground"
-                    card_view:cardCornerRadius="@dimen/card_recycler_corner_radius"
-                    card_view:cardElevation="@dimen/card_recycler_elevation"
-                    card_view:cardUseCompatPadding="true">
+                    android:layout_height="match_parent">
 
-                    <RelativeLayout
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/cardMultiplication"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="?attr/selectableItemBackground"
+                        android:foreground="?attr/selectableItemBackground"
+                        card_view:cardCornerRadius="@dimen/card_recycler_corner_radius"
+                        card_view:cardElevation="@dimen/card_recycler_elevation"
+                        card_view:cardUseCompatPadding="true">
 
-                        <ImageView
-                            android:id="@+id/imgSubtraction"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:adjustViewBounds="true"
-                            android:contentDescription="subtraction"
-                            android:src="@drawable/minus_card" />
-
-                        <TextView
-                            android:id="@+id/txtsubsign"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentTop="true"
-                            android:layout_centerHorizontal="true"
-                            android:gravity="center"
-                            android:text="-"
-                            android:textColor="@color/cardview_light_background"
-                            android:textSize="150sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/txtSubtraction"
+                        <RelativeLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_alignBottom="@+id/imgSubtraction"
-                            android:layout_alignTop="@+id/imgSubtraction"
-                            android:gravity="left|bottom"
-                            android:paddingLeft="8dp"
-                            android:paddingRight="8dp"
-                            android:text="Subtraction"
-                            android:textAllCaps="true"
-                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-                            android:textColor="#FFF"
-                            android:textStyle="bold" />
+                            android:layout_height="match_parent">
 
-                    </RelativeLayout>
+                            <ImageView
+                                android:id="@+id/imgMultiplication"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:adjustViewBounds="true"
+                                android:contentDescription="Multiplication"
+                                card_view:srcCompat="@drawable/mul_card" />
 
-                </android.support.v7.widget.CardView>
-            </TableRow>
+                            <TextView
+                                android:id="@+id/txtMultiplication"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_alignBottom="@+id/imgMultiplication"
+                                android:layout_alignTop="@+id/imgMultiplication"
+                                android:layout_marginBottom="4dp"
+                                android:gravity="left|bottom"
+                                android:paddingLeft="8dp"
+                                android:paddingRight="8dp"
+                                android:text="Multiplication"
+                                android:textAllCaps="true"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                                android:textColor="#FFF"
+                                android:textSize="19sp"
+                                android:textStyle="bold" />
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                        </RelativeLayout>
 
-                <android.support.v7.widget.CardView
-                    android:id="@+id/cardMultiplication"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="?attr/selectableItemBackground"
-                    android:foreground="?attr/selectableItemBackground"
-                    card_view:cardCornerRadius="@dimen/card_recycler_corner_radius"
-                    card_view:cardElevation="@dimen/card_recycler_elevation"
-                    card_view:cardUseCompatPadding="true">
+                    </android.support.v7.widget.CardView>
 
-                    <RelativeLayout
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/cardDivision"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="?attr/selectableItemBackground"
+                        android:foreground="?attr/selectableItemBackground"
+                        card_view:cardCornerRadius="@dimen/card_recycler_corner_radius"
+                        card_view:cardElevation="@dimen/card_recycler_elevation"
+                        card_view:cardUseCompatPadding="true">
 
-                        <ImageView
-                            android:id="@+id/imgMultiplication"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:adjustViewBounds="true"
-                            android:contentDescription="Multiplication"
-                            card_view:srcCompat="@drawable/mul_card" />
-
-                        <TextView
-                            android:id="@+id/txtmulsign"
+                        <RelativeLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_alignBottom="@+id/imgMultiplication"
-                            android:layout_alignParentLeft="true"
-                            android:layout_alignParentStart="true"
-                            android:layout_marginBottom="19dp"
-                            android:gravity="center"
-                            android:text="x"
-                            android:textColor="@color/cardview_light_background"
-                            android:textSize="150sp"
-                            android:textStyle="bold" />
+                            android:layout_height="match_parent">
 
-                        <TextView
-                            android:id="@+id/txtMultiplication"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_alignBottom="@+id/imgMultiplication"
-                            android:layout_alignTop="@+id/imgMultiplication"
-                            android:gravity="left|bottom"
-                            android:paddingLeft="8dp"
-                            android:paddingRight="8dp"
-                            android:text="Multiplication"
-                            android:textAllCaps="true"
-                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-                            android:textColor="#FFF"
-                            android:textSize="19sp"
-                            android:textStyle="bold" />
+                            <ImageView
+                                android:id="@+id/imgDivision"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:adjustViewBounds="true"
+                                android:contentDescription="division"
+                                android:src="@drawable/division_card" />
 
-                    </RelativeLayout>
+                            <TextView
+                                android:id="@+id/txtDivision"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignBottom="@+id/imgDivision"
+                                android:layout_alignTop="@+id/imgDivision"
+                                android:layout_marginBottom="4dp"
+                                android:gravity="left|bottom"
+                                android:paddingLeft="8dp"
+                                android:paddingRight="8dp"
+                                android:text="Division"
+                                android:textAllCaps="true"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                                android:textColor="#FFF"
+                                android:textStyle="bold" />
 
-                </android.support.v7.widget.CardView>
+                        </RelativeLayout>
 
-                <android.support.v7.widget.CardView
-                    android:id="@+id/cardDivision"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="?attr/selectableItemBackground"
-                    android:foreground="?attr/selectableItemBackground"
-                    card_view:cardCornerRadius="@dimen/card_recycler_corner_radius"
-                    card_view:cardElevation="@dimen/card_recycler_elevation"
-                    card_view:cardUseCompatPadding="true">
+                    </android.support.v7.widget.CardView>
+                </TableRow>
 
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+            </TableLayout>
 
-                        <ImageView
-                            android:id="@+id/imgDivision"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:adjustViewBounds="true"
-                            android:contentDescription="division"
-                            android:src="@drawable/division_card" />
-
-                        <TextView
-                            android:id="@+id/txtmulsign2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentTop="true"
-                            android:layout_centerHorizontal="true"
-                            android:gravity="center"
-                            android:text="÷"
-                            android:textColor="@color/cardview_light_background"
-                            android:textSize="150sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/txtDivision"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_alignBottom="@+id/imgDivision"
-                            android:layout_alignTop="@+id/imgDivision"
-                            android:gravity="left|bottom"
-                            android:paddingLeft="8dp"
-                            android:paddingRight="8dp"
-                            android:text="Division"
-                            android:textAllCaps="true"
-                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-                            android:textColor="#FFF"
-                            android:textStyle="bold" />
-
-                    </RelativeLayout>
-
-                </android.support.v7.widget.CardView>
-            </TableRow>
-
-        </TableLayout>
-
-    </android.support.v7.widget.CardView>
+        </android.support.v7.widget.CardView>
 
 
-
-</LinearLayout>
+    </LinearLayout>
+</ScrollView>

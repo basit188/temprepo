@@ -28,7 +28,7 @@ public class AlgebraMainFragment extends Fragment implements View.OnClickListene
     }
 
     public void onViewCreated(View v, Bundle b){
-        cardAlgebra = v.findViewById(R.id.card_algebra);
+        cardAlgebra = v.findViewById(R.id.card_algebra_main);
         cardAlgebra.setOnClickListener(this);
     }
 

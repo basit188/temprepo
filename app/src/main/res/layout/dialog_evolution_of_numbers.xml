@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
 
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
     android:background="?attr/selectableItemBackgroundBorderless">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <android.support.v7.widget.CardView
         android:id="@+id/card_dialog_evolution_fullscreen"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
+        android:layout_height="match_parent"
         app:cardCornerRadius="0dp"
         app:cardElevation="2dp">
 
@@ -39,12 +44,13 @@
                 android:layout_gravity="center_vertical"
                 android:layout_marginLeft="16dp"
                 android:layout_marginStart="16dp"
+                android:layout_marginBottom="4dp"
                 android:text="Evolution of Numbers" />
         </LinearLayout>
     </android.support.v7.widget.CardView>
 
     <android.support.v7.widget.CardView
-        android:id="@+id/card_arthemetic"
+        android:id="@+id/card_evolution_of_numbers"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="@dimen/activity_horizontal_margin"
@@ -62,7 +68,7 @@
                 android:layout_height="match_parent">
 
                 <android.support.v7.widget.CardView
-                    android:id="@+id/cardAddition"
+                    android:id="@+id/cardNaturalNumbers"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -77,37 +83,26 @@
                         android:layout_height="match_parent">
 
                         <ImageView
-                            android:id="@+id/imgAddition"
+                            android:id="@+id/imgNaturalNumbers"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:adjustViewBounds="true"
-                            android:contentDescription="ArithmeticOperations"
-                            app:srcCompat="@drawable/add_card" />
+                            android:contentDescription="Natural Numbers"
+                            app:srcCompat="@drawable/natural_numbers" />
 
                         <TextView
-                            android:id="@+id/txtplussign"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentTop="true"
-                            android:layout_centerHorizontal="true"
-                            android:gravity="center"
-                            android:text="+"
-                            android:textColor="@color/cardview_light_background"
-                            android:textSize="150sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/txtaddition"
+                            android:id="@+id/txtNaturalNumbers"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_alignBottom="@+id/imgAddition"
+                            android:layout_alignBottom="@+id/imgNaturalNumbers"
                             android:layout_alignParentBottom="false"
-                            android:layout_alignTop="@+id/imgAddition"
-                            android:gravity="bottom"
+                            android:layout_alignTop="@+id/imgNaturalNumbers"
+                            android:gravity="center"
                             android:paddingLeft="8dp"
                             android:paddingRight="8dp"
-                            android:text="Addition"
+                            android:text="Natural Numbers"
                             android:textAllCaps="true"
+                            android:layout_marginBottom="4dp"
                             android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
                             android:textColor="#FFF"
                             android:textStyle="bold" />
@@ -117,7 +112,7 @@
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
-                    android:id="@+id/cardSubtraction"
+                    android:id="@+id/cardWholeNumbers"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -132,35 +127,24 @@
                         android:layout_height="match_parent">
 
                         <ImageView
-                            android:id="@+id/imgSubtraction"
+                            android:id="@+id/imgWholeNumbers"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:adjustViewBounds="true"
-                            android:contentDescription="subtraction"
-                            android:src="@drawable/minus_card" />
+                            android:contentDescription="WholeNumbers"
+                            android:src="@drawable/whole_numbers" />
 
                         <TextView
-                            android:id="@+id/txtsubsign"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentTop="true"
-                            android:layout_centerHorizontal="true"
-                            android:gravity="center"
-                            android:text="-"
-                            android:textColor="@color/cardview_light_background"
-                            android:textSize="150sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/txtSubtraction"
+                            android:id="@+id/txtWholeNumbers"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_alignBottom="@+id/imgSubtraction"
-                            android:layout_alignTop="@+id/imgSubtraction"
-                            android:gravity="left|bottom"
+                            android:layout_alignBottom="@+id/imgWholeNumbers"
+                            android:layout_alignTop="@+id/imgWholeNumbers"
+                            android:layout_marginBottom="4dp"
+                            android:gravity="center"
                             android:paddingLeft="8dp"
                             android:paddingRight="8dp"
-                            android:text="Subtraction"
+                            android:text=" Whole Numbers"
                             android:textAllCaps="true"
                             android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
                             android:textColor="#FFF"
@@ -176,7 +160,7 @@
                 android:layout_height="match_parent">
 
                 <android.support.v7.widget.CardView
-                    android:id="@+id/cardMultiplication"
+                    android:id="@+id/cardIntegers"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -191,37 +175,25 @@
                         android:layout_height="match_parent">
 
                         <ImageView
-                            android:id="@+id/imgMultiplication"
+                            android:id="@+id/imgIntegers"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:adjustViewBounds="true"
-                            android:contentDescription="Multiplication"
-                            app:srcCompat="@drawable/mul_card" />
+                            android:contentDescription="Integers"
+                            app:srcCompat="@drawable/integers" />
+
 
                         <TextView
-                            android:id="@+id/txtmulsign"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_alignBottom="@+id/imgMultiplication"
-                            android:layout_alignParentLeft="true"
-                            android:layout_alignParentStart="true"
-                            android:layout_marginBottom="19dp"
-                            android:gravity="center"
-                            android:text="x"
-                            android:textColor="@color/cardview_light_background"
-                            android:textSize="150sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/txtMultiplication"
+                            android:id="@+id/txtIntegers"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_alignBottom="@+id/imgMultiplication"
-                            android:layout_alignTop="@+id/imgMultiplication"
-                            android:gravity="left|bottom"
+                            android:layout_alignBottom="@+id/imgIntegers"
+                            android:layout_alignTop="@+id/imgIntegers"
+                            android:gravity="center"
                             android:paddingLeft="8dp"
                             android:paddingRight="8dp"
-                            android:text="Multiplication"
+                            android:layout_marginBottom="4dp"
+                            android:text="Integers"
                             android:textAllCaps="true"
                             android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
                             android:textColor="#FFF"
@@ -233,7 +205,7 @@
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
-                    android:id="@+id/cardDivision"
+                    android:id="@+id/cardRational"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -248,35 +220,119 @@
                         android:layout_height="match_parent">
 
                         <ImageView
-                            android:id="@+id/imgDivision"
+                            android:id="@+id/imgRational"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:adjustViewBounds="true"
-                            android:contentDescription="division"
-                            android:src="@drawable/division_card" />
+                            android:contentDescription="Rational"
+                            android:src="@drawable/rational_numbers" />
+
 
                         <TextView
-                            android:id="@+id/txtmulsign2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentTop="true"
-                            android:layout_centerHorizontal="true"
-                            android:gravity="center"
-                            android:text="÷"
-                            android:textColor="@color/cardview_light_background"
-                            android:textSize="150sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/txtDivision"
+                            android:id="@+id/txtRational"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_alignBottom="@+id/imgDivision"
-                            android:layout_alignTop="@+id/imgDivision"
-                            android:gravity="left|bottom"
+                            android:layout_alignBottom="@+id/imgRational"
+                            android:layout_alignTop="@+id/imgRational"
+                            android:gravity="center"
                             android:paddingLeft="8dp"
                             android:paddingRight="8dp"
-                            android:text="Division"
+                            android:text="Rational"
+                            android:layout_marginBottom="4dp"
+                            android:textAllCaps="true"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                            android:textColor="#FFF"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cardIrrational"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="?attr/selectableItemBackground"
+                    android:foreground="?attr/selectableItemBackground"
+                    app:cardCornerRadius="@dimen/card_recycler_corner_radius"
+                    app:cardElevation="@dimen/card_recycler_elevation"
+                    app:cardUseCompatPadding="true">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/imgIrrational"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:contentDescription="Irrational"
+                            app:srcCompat="@drawable/irrational_number" />
+
+
+                        <TextView
+                            android:id="@+id/txtIrrational"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_alignBottom="@+id/imgIrrational"
+                            android:layout_alignTop="@+id/imgIrrational"
+                            android:layout_marginBottom="4dp"
+                            android:gravity="center"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp"
+                            android:text="Irrational"
+                            android:textAllCaps="true"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                            android:textColor="#FFF"
+                            android:textSize="19sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cardRealNumbers"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="?attr/selectableItemBackground"
+                    android:foreground="?attr/selectableItemBackground"
+                    app:cardCornerRadius="@dimen/card_recycler_corner_radius"
+                    app:cardElevation="@dimen/card_recycler_elevation"
+                    app:cardUseCompatPadding="true">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/imgReal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:contentDescription="Real Numbers"
+                            android:src="@drawable/real_numbers" />
+
+
+                        <TextView
+                            android:id="@+id/txtReal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/imgReal"
+                            android:layout_alignTop="@+id/imgReal"
+                            android:layout_marginBottom="4dp"
+                            android:gravity="center"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp"
+                            android:text="Real Numbers"
                             android:textAllCaps="true"
                             android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
                             android:textColor="#FFF"
@@ -290,5 +346,7 @@
         </TableLayout>
 
     </android.support.v7.widget.CardView>
-
 </LinearLayout>
+
+</ScrollView>
+

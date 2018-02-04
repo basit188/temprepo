@@ -21,5 +21,5 @@
         app:backgroundTint="@color/app_blue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_revert" />
+        app:srcCompat="@drawable/ic_repeat_white_24dp" />
 </android.support.constraint.ConstraintLayout>

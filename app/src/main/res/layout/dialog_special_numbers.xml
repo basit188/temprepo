@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="?attr/selectableItemBackgroundBorderless">
-
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
     <android.support.v7.widget.CardView
         android:id="@+id/card_dialog_special_numbes"
         android:layout_width="match_parent"
@@ -44,7 +47,7 @@
     </android.support.v7.widget.CardView>
 
     <android.support.v7.widget.CardView
-        android:id="@+id/card_arthemetic"
+        android:id="@+id/card_special_numbers"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="@dimen/activity_horizontal_margin"
@@ -62,7 +65,7 @@
                 android:layout_height="match_parent">
 
                 <android.support.v7.widget.CardView
-                    android:id="@+id/cardAddition"
+                    android:id="@+id/cardPie"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -77,37 +80,27 @@
                         android:layout_height="match_parent">
 
                         <ImageView
-                            android:id="@+id/imgAddition"
+                            android:id="@+id/imgPie"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:adjustViewBounds="true"
                             android:contentDescription="ArithmeticOperations"
                             app:srcCompat="@drawable/add_card" />
 
-                        <TextView
-                            android:id="@+id/txtplussign"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentTop="true"
-                            android:layout_centerHorizontal="true"
-                            android:gravity="center"
-                            android:text="+"
-                            android:textColor="@color/cardview_light_background"
-                            android:textSize="150sp"
-                            android:textStyle="bold" />
 
                         <TextView
-                            android:id="@+id/txtaddition"
+                            android:id="@+id/txtPie"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_alignBottom="@+id/imgAddition"
+                            android:layout_alignBottom="@+id/imgPie"
                             android:layout_alignParentBottom="false"
-                            android:layout_alignTop="@+id/imgAddition"
+                            android:layout_alignTop="@+id/imgPie"
                             android:gravity="bottom"
                             android:paddingLeft="8dp"
                             android:paddingRight="8dp"
-                            android:text="Addition"
+                            android:text="Pie"
                             android:textAllCaps="true"
+                            android:layout_marginBottom="4dp"
                             android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
                             android:textColor="#FFF"
                             android:textStyle="bold" />
@@ -117,7 +110,7 @@
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
-                    android:id="@+id/cardSubtraction"
+                    android:id="@+id/cardE"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -132,36 +125,26 @@
                         android:layout_height="match_parent">
 
                         <ImageView
-                            android:id="@+id/imgSubtraction"
+                            android:id="@+id/imgE"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:adjustViewBounds="true"
-                            android:contentDescription="subtraction"
+                            android:contentDescription="E"
                             android:src="@drawable/minus_card" />
 
-                        <TextView
-                            android:id="@+id/txtsubsign"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentTop="true"
-                            android:layout_centerHorizontal="true"
-                            android:gravity="center"
-                            android:text="-"
-                            android:textColor="@color/cardview_light_background"
-                            android:textSize="150sp"
-                            android:textStyle="bold" />
 
                         <TextView
-                            android:id="@+id/txtSubtraction"
+                            android:id="@+id/txtEulersConstant"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_alignBottom="@+id/imgSubtraction"
-                            android:layout_alignTop="@+id/imgSubtraction"
+                            android:layout_alignBottom="@+id/imgE"
+                            android:layout_alignTop="@+id/imgE"
                             android:gravity="left|bottom"
                             android:paddingLeft="8dp"
                             android:paddingRight="8dp"
-                            android:text="Subtraction"
+                            android:text="Eulers Constant"
                             android:textAllCaps="true"
+                            android:layout_marginBottom="4dp"
                             android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
                             android:textColor="#FFF"
                             android:textStyle="bold" />
@@ -176,7 +159,7 @@
                 android:layout_height="match_parent">
 
                 <android.support.v7.widget.CardView
-                    android:id="@+id/cardMultiplication"
+                    android:id="@+id/cardEvenNumbers"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -191,37 +174,26 @@
                         android:layout_height="match_parent">
 
                         <ImageView
-                            android:id="@+id/imgMultiplication"
+                            android:id="@+id/imgEvenNumbers"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:adjustViewBounds="true"
-                            android:contentDescription="Multiplication"
+                            android:contentDescription="Even Numbers"
                             app:srcCompat="@drawable/mul_card" />
 
-                        <TextView
-                            android:id="@+id/txtmulsign"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_alignBottom="@+id/imgMultiplication"
-                            android:layout_alignParentLeft="true"
-                            android:layout_alignParentStart="true"
-                            android:layout_marginBottom="19dp"
-                            android:gravity="center"
-                            android:text="x"
-                            android:textColor="@color/cardview_light_background"
-                            android:textSize="150sp"
-                            android:textStyle="bold" />
+
 
                         <TextView
-                            android:id="@+id/txtMultiplication"
+                            android:id="@+id/txtEvenNumbers"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_alignBottom="@+id/imgMultiplication"
-                            android:layout_alignTop="@+id/imgMultiplication"
+                            android:layout_alignBottom="@+id/imgEvenNumbers"
+                            android:layout_alignTop="@+id/imgEvenNumbers"
                             android:gravity="left|bottom"
                             android:paddingLeft="8dp"
                             android:paddingRight="8dp"
-                            android:text="Multiplication"
+                            android:layout_marginBottom="4dp"
+                            android:text="Even Numbers"
                             android:textAllCaps="true"
                             android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
                             android:textColor="#FFF"
@@ -233,7 +205,7 @@
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
-                    android:id="@+id/cardDivision"
+                    android:id="@+id/cardOddNumbers"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -248,35 +220,25 @@
                         android:layout_height="match_parent">
 
                         <ImageView
-                            android:id="@+id/imgDivision"
+                            android:id="@+id/imgOddNumbers"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:adjustViewBounds="true"
-                            android:contentDescription="division"
+                            android:contentDescription="Even Numbers"
                             android:src="@drawable/division_card" />
 
                         <TextView
-                            android:id="@+id/txtmulsign2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentTop="true"
-                            android:layout_centerHorizontal="true"
-                            android:gravity="center"
-                            android:text="÷"
-                            android:textColor="@color/cardview_light_background"
-                            android:textSize="150sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/txtDivision"
+                            android:id="@+id/txtOddNumbers"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_alignBottom="@+id/imgDivision"
-                            android:layout_alignTop="@+id/imgDivision"
-                            android:gravity="left|bottom"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginBottom="9dp"
+                            android:gravity="start|bottom"
                             android:paddingLeft="8dp"
                             android:paddingRight="8dp"
-                            android:text="Division"
+                            android:text="Odd Numbers"
                             android:textAllCaps="true"
                             android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
                             android:textColor="#FFF"
@@ -292,3 +254,4 @@
     </android.support.v7.widget.CardView>
 
 </LinearLayout>
+</ScrollView>
