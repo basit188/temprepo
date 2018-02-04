@@ -1,6 +1,9 @@
 package mbn.org.mathviz.fragment;
 
+import android.animation.ObjectAnimator;
 import android.os.Bundle;
+import android.support.transition.Slide;
+import android.support.transition.TransitionInflater;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -25,6 +28,7 @@ public class AlgebraMainFragment extends Fragment implements View.OnClickListene
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_algebra_main,container,false);
         return v;
+
     }
 
     public void onViewCreated(View v, Bundle b){
@@ -40,5 +44,6 @@ public class AlgebraMainFragment extends Fragment implements View.OnClickListene
         fragmentTransaction.setCustomAnimations(android.R.anim.fade_in,android.R.anim.fade_out,android.R.anim.fade_in,android.R.anim.fade_out);
         fragmentTransaction.replace(R.id.algebraContainer,algebraFragment).addToBackStack("hh'").commit();
     }
+
 
 }

@@ -85,7 +85,7 @@
                             android:layout_height="wrap_content"
                             android:adjustViewBounds="true"
                             android:contentDescription="ArithmeticOperations"
-                            app:srcCompat="@drawable/add_card" />
+                            app:srcCompat="@drawable/pi" />
 
 
                         <TextView
@@ -95,10 +95,10 @@
                             android:layout_alignBottom="@+id/imgPie"
                             android:layout_alignParentBottom="false"
                             android:layout_alignTop="@+id/imgPie"
-                            android:gravity="bottom"
+                            android:gravity="center"
                             android:paddingLeft="8dp"
                             android:paddingRight="8dp"
-                            android:text="Pie"
+                            android:text="Pi"
                             android:textAllCaps="true"
                             android:layout_marginBottom="4dp"
                             android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
@@ -130,7 +130,7 @@
                             android:layout_height="wrap_content"
                             android:adjustViewBounds="true"
                             android:contentDescription="E"
-                            android:src="@drawable/minus_card" />
+                            android:src="@drawable/e"/>
 
 
                         <TextView
@@ -139,7 +139,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignBottom="@+id/imgE"
                             android:layout_alignTop="@+id/imgE"
-                            android:gravity="left|bottom"
+                            android:gravity="center"
                             android:paddingLeft="8dp"
                             android:paddingRight="8dp"
                             android:text="Eulers Constant"
@@ -179,7 +179,7 @@
                             android:layout_height="wrap_content"
                             android:adjustViewBounds="true"
                             android:contentDescription="Even Numbers"
-                            app:srcCompat="@drawable/mul_card" />
+                            app:srcCompat="@drawable/even_number" />
 
 
 
@@ -189,7 +189,7 @@
                             android:layout_height="match_parent"
                             android:layout_alignBottom="@+id/imgEvenNumbers"
                             android:layout_alignTop="@+id/imgEvenNumbers"
-                            android:gravity="left|bottom"
+                            android:gravity="center"
                             android:paddingLeft="8dp"
                             android:paddingRight="8dp"
                             android:layout_marginBottom="4dp"
@@ -225,17 +225,16 @@
                             android:layout_height="wrap_content"
                             android:adjustViewBounds="true"
                             android:contentDescription="Even Numbers"
-                            android:src="@drawable/division_card" />
+                            android:src="@drawable/odd_number" />
 
                         <TextView
                             android:id="@+id/txtOddNumbers"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
                             android:layout_alignParentLeft="true"
                             android:layout_alignParentStart="true"
-                            android:layout_marginBottom="9dp"
-                            android:gravity="start|bottom"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
                             android:paddingLeft="8dp"
                             android:paddingRight="8dp"
                             android:text="Odd Numbers"

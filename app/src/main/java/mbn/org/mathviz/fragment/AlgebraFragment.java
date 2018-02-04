@@ -2,6 +2,7 @@ package mbn.org.mathviz.fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.transition.Explode;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -9,7 +10,10 @@ import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import mbn.org.mathviz.activity.DisplayVisualizationActivity;
 import mbn.org.mathviz.dialog.ArthemeticOperationsDialog;
@@ -30,10 +34,10 @@ public class AlgebraFragment extends Fragment{
         View v = inflater.inflate(R.layout.fragment_algebra,container,false);
         return v;
     }
-    public void onViewCreated(View v, Bundle b){
+    public void onViewCreated(View v, Bundle b) {
         cardArithmeticOperations = v.findViewById(R.id.cardArithmeticOperations);
         cardSpecialNumbers = v.findViewById(R.id.cardSpecialNumbers);
-        cardEvolutionOfNumbers= v.findViewById(R.id.cardEvolutionOfNumbers);
+        cardEvolutionOfNumbers = v.findViewById(R.id.cardEvolutionOfNumbers);
         cardOtherConcepts = v.findViewById(R.id.cardOtherConcepts);
         fragmentManager = getActivity().getSupportFragmentManager();
 
@@ -41,7 +45,7 @@ public class AlgebraFragment extends Fragment{
             @Override
             public void onClick(View v) {
                 ArthemeticOperationsDialog arthemeticOperationsDialog = new ArthemeticOperationsDialog();
-                arthemeticOperationsDialog.show(fragmentManager,"AODialog");
+                arthemeticOperationsDialog.show(fragmentManager, "AODialog");
             }
         });
 
@@ -49,7 +53,7 @@ public class AlgebraFragment extends Fragment{
             @Override
             public void onClick(View v) {
                 DialogFragment otherConceptsDialog = new OtherConceptsDialog();
-                otherConceptsDialog.show(fragmentManager,"AODi2g");
+                otherConceptsDialog.show(fragmentManager, "AODi2g");
 
             }
         });
@@ -58,7 +62,7 @@ public class AlgebraFragment extends Fragment{
             @Override
             public void onClick(View v) {
                 DialogFragment specialNumbers = new SpecialNumbersDialog();
-                specialNumbers.show(fragmentManager,"specialNumbers");
+                specialNumbers.show(fragmentManager, "specialNumbers");
 
             }
         });
@@ -67,12 +71,14 @@ public class AlgebraFragment extends Fragment{
             @Override
             public void onClick(View v) {
                 DialogFragment evolutionOfNumbers = new EvolutionOfNumbersDialog();
-                evolutionOfNumbers.show(fragmentManager,"evolution");
+                evolutionOfNumbers.show(fragmentManager, "evolution");
+
 
             }
         });
 
 
-
     }
+
+
 }
