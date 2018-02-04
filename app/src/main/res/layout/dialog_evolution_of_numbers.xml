@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
 
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -36,9 +37,258 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
+                android:layout_marginLeft="16dp"
                 android:layout_marginStart="16dp"
-                android:text="Evolution of Numbers"
-                android:layout_marginLeft="16dp" />
+                android:text="Evolution of Numbers" />
         </LinearLayout>
     </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_arthemetic"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:layout_weight="1"
+        android:background="?attr/selectableItemBackground"
+        android:foreground="?attr/selectableItemBackground"
+        tools:ignore="HardcodedText">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cardAddition"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="?attr/selectableItemBackground"
+                    android:foreground="?attr/selectableItemBackground"
+                    app:cardCornerRadius="@dimen/card_recycler_corner_radius"
+                    app:cardElevation="@dimen/card_recycler_elevation"
+                    app:cardUseCompatPadding="true">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/imgAddition"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:contentDescription="ArithmeticOperations"
+                            app:srcCompat="@drawable/add_card" />
+
+                        <TextView
+                            android:id="@+id/txtplussign"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center"
+                            android:text="+"
+                            android:textColor="@color/cardview_light_background"
+                            android:textSize="150sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txtaddition"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/imgAddition"
+                            android:layout_alignParentBottom="false"
+                            android:layout_alignTop="@+id/imgAddition"
+                            android:gravity="bottom"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp"
+                            android:text="Addition"
+                            android:textAllCaps="true"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                            android:textColor="#FFF"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cardSubtraction"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="?attr/selectableItemBackground"
+                    android:foreground="?attr/selectableItemBackground"
+                    app:cardCornerRadius="@dimen/card_recycler_corner_radius"
+                    app:cardElevation="@dimen/card_recycler_elevation"
+                    app:cardUseCompatPadding="true">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/imgSubtraction"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:contentDescription="subtraction"
+                            android:src="@drawable/minus_card" />
+
+                        <TextView
+                            android:id="@+id/txtsubsign"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center"
+                            android:text="-"
+                            android:textColor="@color/cardview_light_background"
+                            android:textSize="150sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txtSubtraction"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/imgSubtraction"
+                            android:layout_alignTop="@+id/imgSubtraction"
+                            android:gravity="left|bottom"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp"
+                            android:text="Subtraction"
+                            android:textAllCaps="true"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                            android:textColor="#FFF"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cardMultiplication"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="?attr/selectableItemBackground"
+                    android:foreground="?attr/selectableItemBackground"
+                    app:cardCornerRadius="@dimen/card_recycler_corner_radius"
+                    app:cardElevation="@dimen/card_recycler_elevation"
+                    app:cardUseCompatPadding="true">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/imgMultiplication"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:contentDescription="Multiplication"
+                            app:srcCompat="@drawable/mul_card" />
+
+                        <TextView
+                            android:id="@+id/txtmulsign"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/imgMultiplication"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginBottom="19dp"
+                            android:gravity="center"
+                            android:text="x"
+                            android:textColor="@color/cardview_light_background"
+                            android:textSize="150sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txtMultiplication"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_alignBottom="@+id/imgMultiplication"
+                            android:layout_alignTop="@+id/imgMultiplication"
+                            android:gravity="left|bottom"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp"
+                            android:text="Multiplication"
+                            android:textAllCaps="true"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                            android:textColor="#FFF"
+                            android:textSize="19sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cardDivision"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="?attr/selectableItemBackground"
+                    android:foreground="?attr/selectableItemBackground"
+                    app:cardCornerRadius="@dimen/card_recycler_corner_radius"
+                    app:cardElevation="@dimen/card_recycler_elevation"
+                    app:cardUseCompatPadding="true">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/imgDivision"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:contentDescription="division"
+                            android:src="@drawable/division_card" />
+
+                        <TextView
+                            android:id="@+id/txtmulsign2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center"
+                            android:text="÷"
+                            android:textColor="@color/cardview_light_background"
+                            android:textSize="150sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txtDivision"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/imgDivision"
+                            android:layout_alignTop="@+id/imgDivision"
+                            android:gravity="left|bottom"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp"
+                            android:text="Division"
+                            android:textAllCaps="true"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                            android:textColor="#FFF"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+            </TableRow>
+
+        </TableLayout>
+
+    </android.support.v7.widget.CardView>
+
 </LinearLayout>
