@@ -87,7 +87,7 @@
                             android:layout_height="match_parent">
 
                             <ImageView
-                                android:id="@+id/imgAddition"
+                                android:id="@+id/imgArthmetic"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:adjustViewBounds="true"
@@ -98,9 +98,9 @@
                                 android:id="@+id/txtaddition"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_alignBottom="@+id/imgAddition"
+                                android:layout_alignBottom="@+id/imgArthmetic"
                                 android:layout_alignParentBottom="false"
-                                android:layout_alignTop="@+id/imgAddition"
+                                android:layout_alignTop="@+id/imgArthmetic"
                                 android:layout_marginBottom="4dp"
                                 android:gravity="bottom"
                                 android:paddingLeft="8dp"
@@ -179,7 +179,7 @@
                             android:layout_height="match_parent">
 
                             <ImageView
-                                android:id="@+id/imgMultiplication"
+                                android:id="@+id/imgSpecialnumbers"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:adjustViewBounds="true"
@@ -190,8 +190,8 @@
                                 android:id="@+id/txtMultiplication"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:layout_alignBottom="@+id/imgMultiplication"
-                                android:layout_alignTop="@+id/imgMultiplication"
+                                android:layout_alignBottom="@+id/imgSpecialnumbers"
+                                android:layout_alignTop="@+id/imgSpecialnumbers"
                                 android:layout_marginBottom="4dp"
                                 android:gravity="left|bottom"
                                 android:paddingLeft="8dp"
@@ -223,7 +223,7 @@
                             android:layout_height="match_parent">
 
                             <ImageView
-                                android:id="@+id/imgDivision"
+                                android:id="@+id/imgOtherConcepts"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:adjustViewBounds="true"
@@ -234,8 +234,8 @@
                                 android:id="@+id/txtDivision"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_alignBottom="@+id/imgDivision"
-                                android:layout_alignTop="@+id/imgDivision"
+                                android:layout_alignBottom="@+id/imgOtherConcepts"
+                                android:layout_alignTop="@+id/imgOtherConcepts"
                                 android:layout_marginBottom="4dp"
                                 android:gravity="left|bottom"
                                 android:paddingLeft="8dp"

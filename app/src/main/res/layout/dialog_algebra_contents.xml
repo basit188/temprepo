@@ -36,7 +36,7 @@
                     android:background="?attr/selectableItemBackgroundBorderless"
                     android:clickable="true"
                     android:padding="4dp"
-                    app:srcCompat="@android:drawable/ic_menu_close_clear_cancel" android:focusable="true"/>
+                    app:srcCompat="@android:drawable/ic_menu_close_clear_cancel" android:focusable="true" />
 
                 <TextView
                     style="@style/Base.DialogWindowTitle.AppCompat"
@@ -86,9 +86,9 @@
                             android:layout_height="match_parent">
 
                             <ImageView
-                                android:id="@+id/imgAddition"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:id="@+id/imgArthmetic"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
                                 android:adjustViewBounds="true"
                                 android:contentDescription="ArithmeticOperations"
                                 card_view:srcCompat="@drawable/arthemetic" />
@@ -96,10 +96,10 @@
                             <TextView
                                 android:id="@+id/txtArithmeticOperations"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_alignBottom="@+id/imgAddition"
+                                android:layout_height="match_parent"
+                                android:layout_alignBottom="@+id/imgArthmetic"
                                 android:layout_alignParentBottom="false"
-                                android:layout_alignTop="@+id/imgAddition"
+                                android:layout_alignTop="@+id/imgArthmetic"
                                 android:gravity="center"
                                 android:paddingLeft="8dp"
                                 android:paddingRight="8dp"
@@ -128,9 +128,8 @@
                             android:layout_height="match_parent">
 
                             <ImageView
-                                android:id="@+id/imgSubtraction"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
                                 android:adjustViewBounds="true"
                                 android:contentDescription="Evolution Of Numbers"
                                 android:src="@drawable/evolution_of_numbers" />
@@ -138,7 +137,7 @@
                             <TextView
                                 android:id="@+id/txtEvolutionOfNumbers"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
+                                android:layout_height="match_parent"
                                 android:layout_alignBottom="@+id/imgSubtraction"
                                 android:layout_alignTop="@+id/imgSubtraction"
                                 android:gravity="center"
@@ -174,9 +173,9 @@
                             android:layout_height="match_parent">
 
                             <ImageView
-                                android:id="@+id/imgMultiplication"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:id="@+id/imgSpecialnumbers"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
                                 android:adjustViewBounds="true"
                                 android:contentDescription="SpecialNumbers"
                                 card_view:srcCompat="@drawable/special_numbers" />
@@ -184,9 +183,9 @@
                             <TextView
                                 android:id="@+id/txtSpecialNumbers"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_alignBottom="@+id/imgMultiplication"
-                                android:layout_alignTop="@+id/imgMultiplication"
+                                android:layout_height="match_parent"
+                                android:layout_alignBottom="@+id/imgSpecialnumbers"
+                                android:layout_alignTop="@+id/imgSpecialnumbers"
                                 android:gravity="center"
 
                                 android:paddingLeft="8dp"
@@ -216,9 +215,9 @@
                             android:layout_height="match_parent">
 
                             <ImageView
-                                android:id="@+id/imgDivision"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:id="@+id/imgOtherConcepts"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
                                 android:adjustViewBounds="true"
                                 android:contentDescription="OtherConcepts"
                                 android:src="@drawable/other_concepts" />
@@ -226,9 +225,9 @@
                             <TextView
                                 android:id="@+id/txtOtherConcepts"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_alignBottom="@+id/imgDivision"
-                                android:layout_alignTop="@+id/imgDivision"
+                                android:layout_height="match_parent"
+                                android:layout_alignBottom="@+id/imgOtherConcepts"
+                                android:layout_alignTop="@+id/imgOtherConcepts"
                                 android:gravity="center"
                                 android:paddingLeft="8dp"
                                 android:paddingRight="8dp"
