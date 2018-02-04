@@ -1,6 +1,7 @@
 package mbn.org.mathviz.fragment;
 
 import android.animation.ObjectAnimator;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.transition.Slide;
 import android.support.transition.TransitionInflater;
@@ -14,15 +15,15 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 
 import mbn.org.mathviz.R;
+import mbn.org.mathviz.dialog.AlgebraContentsDialog;
+
 
 /**
  * Created by basit on 1/2/18.
  */
 
 public class AlgebraMainFragment extends Fragment implements View.OnClickListener{
-    FragmentTransaction fragmentTransaction;
-    AlgebraFragment algebraFragment;
-    FragmentManager fragmentManager;
+
     CardView cardAlgebra;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -37,13 +38,13 @@ public class AlgebraMainFragment extends Fragment implements View.OnClickListene
     }
 
     public void onClick(View v) {
-        cardAlgebra.setLayoutParams(new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.MATCH_PARENT));
-        algebraFragment = new AlgebraFragment();
-        fragmentManager = getActivity().getSupportFragmentManager();
-        fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.setCustomAnimations(android.R.anim.fade_in,android.R.anim.fade_out,android.R.anim.fade_in,android.R.anim.fade_out);
-        fragmentTransaction.replace(R.id.algebraContainer,algebraFragment).addToBackStack("hh'").commit();
+        FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+        AlgebraContentsDialog algebraContentsDialog = new AlgebraContentsDialog();
+        algebraContentsDialog.show(fragmentManager, "AODialog");
+
+
     }
+
 
 
 }

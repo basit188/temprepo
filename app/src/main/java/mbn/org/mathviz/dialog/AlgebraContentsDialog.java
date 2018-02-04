@@ -1,37 +1,25 @@
-package mbn.org.mathviz.fragment;
+package mbn.org.mathviz.dialog;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.support.transition.Explode;
 import android.support.v4.app.DialogFragment;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.widget.Button;
 import android.widget.ImageView;
 
-import mbn.org.mathviz.activity.DisplayVisualizationActivity;
-import mbn.org.mathviz.dialog.ArthemeticOperationsDialog;
-
 import mbn.org.mathviz.R;
-import mbn.org.mathviz.dialog.EvolutionOfNumbersDialog;
-import mbn.org.mathviz.dialog.OtherConceptsDialog;
-import mbn.org.mathviz.dialog.SpecialNumbersDialog;
 
-/**
- * Created by basit on 1/2/18.
- */
-
-public class AlgebraFragment extends Fragment{
+public class AlgebraContentsDialog  extends DialogFragment implements View.OnClickListener{
     CardView cardArithmeticOperations, cardSpecialNumbers,cardEvolutionOfNumbers,cardOtherConcepts;
     FragmentManager fragmentManager;
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setStyle(DialogFragment.STYLE_NORMAL, R.style.FullScreenDialogStyle);
+    }
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment_algebra,container,false);
+        View v = inflater.inflate(R.layout.dialog_algebra_contents,container,false);
         return v;
     }
     public void onViewCreated(View v, Bundle b) {
@@ -40,6 +28,9 @@ public class AlgebraFragment extends Fragment{
         cardEvolutionOfNumbers = v.findViewById(R.id.cardEvolutionOfNumbers);
         cardOtherConcepts = v.findViewById(R.id.cardOtherConcepts);
         fragmentManager = getActivity().getSupportFragmentManager();
+
+        ImageView c = v.findViewById(R.id.img_dialog_fullscreen_close);
+        c.setOnClickListener(this);
 
         cardArithmeticOperations.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,7 +45,6 @@ public class AlgebraFragment extends Fragment{
             public void onClick(View v) {
                 DialogFragment otherConceptsDialog = new OtherConceptsDialog();
                 otherConceptsDialog.show(fragmentManager, "AODi2g");
-
             }
         });
 
@@ -63,7 +53,6 @@ public class AlgebraFragment extends Fragment{
             public void onClick(View v) {
                 DialogFragment specialNumbers = new SpecialNumbersDialog();
                 specialNumbers.show(fragmentManager, "specialNumbers");
-
             }
         });
 
@@ -72,13 +61,11 @@ public class AlgebraFragment extends Fragment{
             public void onClick(View v) {
                 DialogFragment evolutionOfNumbers = new EvolutionOfNumbersDialog();
                 evolutionOfNumbers.show(fragmentManager, "evolution");
-
-
             }
         });
-
-
     }
-
+    public void onClick(View v) {
+        this.dismiss();
+    }
 
 }

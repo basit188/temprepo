@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.VideoView;
 
 import mbn.org.mathviz.R;
-import mbn.org.mathviz.dialog.ArthemeticOperationsDialog;
+
 
 public class DisplayVisualizationActivity extends Activity {
     VideoView video;
