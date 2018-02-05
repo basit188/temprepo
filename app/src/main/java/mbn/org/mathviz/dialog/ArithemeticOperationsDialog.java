@@ -14,7 +14,7 @@ import mbn.org.mathviz.activity.DisplayVisualizationActivity;
 
 public class ArithemeticOperationsDialog extends DialogFragment implements View.OnClickListener{
  CardView cardAddition, cardSubtraction,cardDivision,cardMultiplication;
-public final String VIDEO_ID = "VIDEO_ID";
+
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,7 +37,7 @@ public final String VIDEO_ID = "VIDEO_ID";
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getActivity(), DisplayVisualizationActivity.class);
-                i.putExtra(VIDEO_ID,"addition");
+                i.putExtra(DisplayVisualizationActivity.VISUALIZATION_ID,"addition_set");
                 getActivity().startActivity(i);
             }
         });
@@ -46,7 +46,7 @@ public final String VIDEO_ID = "VIDEO_ID";
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getActivity(), DisplayVisualizationActivity.class);
-                i.putExtra(VIDEO_ID,"subtraction");
+                i.putExtra(DisplayVisualizationActivity.VISUALIZATION_ID,"subtraction_set");
                 getActivity().startActivity(i);
             }
         });
@@ -56,7 +56,7 @@ public final String VIDEO_ID = "VIDEO_ID";
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getActivity(), DisplayVisualizationActivity.class);
-                i.putExtra(VIDEO_ID,"multiplication");
+                i.putExtra(DisplayVisualizationActivity.VISUALIZATION_ID,"multiplication_set");
                 getActivity().startActivity(i);
             }
         });
@@ -65,7 +65,7 @@ public final String VIDEO_ID = "VIDEO_ID";
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getActivity(), DisplayVisualizationActivity.class);
-                i.putExtra(VIDEO_ID,"division");
+                i.putExtra(DisplayVisualizationActivity.VISUALIZATION_ID,"division_set");
                 getActivity().startActivity(i);
             }
         });

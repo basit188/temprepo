@@ -3,24 +3,17 @@ package mbn.org.mathviz.activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.app.Activity;
-import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
 import android.widget.VideoView;
 
 import mbn.org.mathviz.R;
-import mbn.org.mathviz.fragment.ContentsFragment;
-import mbn.org.mathviz.fragment.HomeFragment;
 import mbn.org.mathviz.fragment.NoLineVisualizationFragment;
 import mbn.org.mathviz.fragment.SetVisualizationFragment;
-import mbn.org.mathviz.fragment.TimeLineFragment;
 
 
 public class DisplayVisualizationActivity extends AppCompatActivity {
@@ -28,42 +21,41 @@ public class DisplayVisualizationActivity extends AppCompatActivity {
     private SectionsPagerAdapter mSectionsPagerAdapter;
     private TabLayout tabVisualization;
     private ViewPager mViewPager;
+    public static final String VISUALIZATION_ID = "VISUALIZATION_ID";
+
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-       // getActionBar().setDisplayHomeAsUpEnabled(true);
+
         Intent intent = getIntent();
-        String video_id = intent.getStringExtra("VIDEO_ID");
+        String visualization_id = intent.getStringExtra("VISUALIZATION_ID");
         video = findViewById(R.id.vidAddition);
 
-        switch(video_id){
+        switch(visualization_id){
             case "addition":
-                setContentView(R.layout.activity_display_visualization_2);
-                setViewPager();
+                setContentView(R.layout.activity_display_visualization_1);
+                setViewPager("addition");
                 break;
             case "subtraction":
                 setContentView(R.layout.activity_display_visualization_1);
-                video.setVideoURI(Uri.parse("android.resource://" + getPackageName()+"/"+R.raw.subtraction));
+                setViewPager("subtraction");
                 break;
             case "multiplication":
                 setContentView(R.layout.activity_display_visualization_1);
-                video.setVideoURI(Uri.parse("android.resource://" + getPackageName()+"/"+R.raw.multiplication));
+                setViewPager("multiplication");
                 break;
             case "division":
                 setContentView(R.layout.activity_display_visualization_1);
-                video.setVideoURI(Uri.parse("android.resource://" + getPackageName()+"/"+R.raw.division));
+                setViewPager("division");
                 break;
             default:
                 setContentView(R.layout.activity_display_visualization_1);
                 break;
         }
-
-
-
     }
 
-    private void setViewPager(){
-        mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
+    private void setViewPager(String vizualization_id){
+        mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager(),vizualization_id);
         mViewPager = findViewById(R.id.viewPagerDisplayVisualization);
         mViewPager.setAdapter(mSectionsPagerAdapter);
         tabVisualization = findViewById(R.id.tabVisualization);
@@ -77,21 +69,16 @@ public class DisplayVisualizationActivity extends AppCompatActivity {
         });
     }
 
-    public class SectionsPagerAdapter extends FragmentStatePagerAdapter {
+    public class SectionsPagerAdapter extends FragmentPagerAdapter {
+        String visualization_id;
 
         public SectionsPagerAdapter(FragmentManager fm) {
             super(fm);
         }
 
-        public CharSequence getPageTitle(int position){
-            switch (position){
-                case 0:
-                    return "SetVisualization";
-                case 1:
-                    return "NoLineVisualization";
-                default:
-                    return "none selected";
-            }
+        public SectionsPagerAdapter(FragmentManager fm,String visualization_id) {
+            super(fm);
+            this.visualization_id = visualization_id;
         }
 
         public Fragment getItem(int position) {
@@ -99,9 +86,9 @@ public class DisplayVisualizationActivity extends AppCompatActivity {
             // Return a PlaceholderFragment (defined as a static inner class below).
             switch (position){
                 case 0:
-                    return new SetVisualizationFragment();
+                    return SetVisualizationFragment.newInstance(visualization_id);
                 case 1:
-                    return new NoLineVisualizationFragment();
+                    return NoLineVisualizationFragment.newInstance(visualization_id);
                 default:
                     return null;
             }

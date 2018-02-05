@@ -105,10 +105,10 @@ public class MainActivity extends AppCompatActivity
                 fragmentManager = getSupportFragmentManager();
                 (new AlgebraContentsDialog()).show(fragmentManager,"ALGEBDIALOG");
                 break;
-//            case R.id.nav_Arthemetic_operations:
-//                fragmentManager = getSupportFragmentManager();
-//                (new ArithemeticOperationsDialog()).show(fragmentManager,"ALGEBDIALOG");
-//                break;
+            case R.id.nav_arithmetic_operations:
+                fragmentManager = getSupportFragmentManager();
+                (new ArithemeticOperationsDialog()).show(fragmentManager,"ALGEBDIALOG");
+                break;
             case R.id.nav_evolution_of_numbers:
                 fragmentManager = getSupportFragmentManager();
                 (new EvolutionOfNumbersDialog()).show(fragmentManager,"ALGEBDIALOG");
@@ -123,18 +123,6 @@ public class MainActivity extends AppCompatActivity
                 break;
 
         }
-
-//        else if (id == R.id.nav_gallery) {
-//
-//        } else if (id == R.id.nav_slideshow) {
-//
-//        } else if (id == R.id.nav_manage) {
-//
-//        } else if (id == R.id.nav_share) {
-//
-//        } else if (id == R.id.nav_send) {
-//
-//        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

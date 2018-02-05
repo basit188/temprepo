@@ -18,7 +18,7 @@ import android.widget.TextView;
 import mbn.org.mathviz.R;
 
 public class SplashScreen extends AppCompatActivity {
-    private static int SPLASH_TIME_OUT = 2300;
+    private static int SPLASH_TIME_OUT = 1000;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

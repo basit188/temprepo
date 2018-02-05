@@ -25,7 +25,6 @@ import mbn.org.mathviz.dialog.AlgebraContentsDialog;
 public class AlgebraMainFragment extends Fragment implements View.OnClickListener{
 
     CardView cardAlgebra;
-
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_algebra_main,container,false);
         return v;
