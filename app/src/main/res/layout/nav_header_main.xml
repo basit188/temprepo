@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="@dimen/nav_header_height"
     tools:ignore="HardcodedText"
-    android:background="@drawable/drawer_image"
+    android:background="@drawable/toolbar_background"
     android:gravity="bottom"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
