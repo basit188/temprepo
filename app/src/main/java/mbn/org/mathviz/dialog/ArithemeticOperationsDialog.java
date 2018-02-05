@@ -37,7 +37,7 @@ public class ArithemeticOperationsDialog extends DialogFragment implements View.
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getActivity(), DisplayVisualizationActivity.class);
-                i.putExtra(DisplayVisualizationActivity.VISUALIZATION_ID,"addition_set");
+                i.putExtra(DisplayVisualizationActivity.VISUALIZATION_ID,"addition");
                 getActivity().startActivity(i);
             }
         });
@@ -46,7 +46,7 @@ public class ArithemeticOperationsDialog extends DialogFragment implements View.
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getActivity(), DisplayVisualizationActivity.class);
-                i.putExtra(DisplayVisualizationActivity.VISUALIZATION_ID,"subtraction_set");
+                i.putExtra(DisplayVisualizationActivity.VISUALIZATION_ID,"subtraction");
                 getActivity().startActivity(i);
             }
         });
@@ -56,7 +56,7 @@ public class ArithemeticOperationsDialog extends DialogFragment implements View.
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getActivity(), DisplayVisualizationActivity.class);
-                i.putExtra(DisplayVisualizationActivity.VISUALIZATION_ID,"multiplication_set");
+                i.putExtra(DisplayVisualizationActivity.VISUALIZATION_ID,"multiplication");
                 getActivity().startActivity(i);
             }
         });
@@ -65,7 +65,7 @@ public class ArithemeticOperationsDialog extends DialogFragment implements View.
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getActivity(), DisplayVisualizationActivity.class);
-                i.putExtra(DisplayVisualizationActivity.VISUALIZATION_ID,"division_set");
+                i.putExtra(DisplayVisualizationActivity.VISUALIZATION_ID,"division");
                 getActivity().startActivity(i);
             }
         });

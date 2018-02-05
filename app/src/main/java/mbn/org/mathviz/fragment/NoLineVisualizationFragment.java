@@ -43,6 +43,9 @@ public class NoLineVisualizationFragment extends Fragment {
             case "division":
                 videoURI = Uri.parse("android.resource://" + getActivity().getPackageName()+"/"+R.raw.division_line);
                 break;
+            default:
+                videoURI = videoURI = Uri.parse("android.resource://" + getActivity().getPackageName()+"/"+R.raw.division_set);
+                break;
         }
 
         setUserVisibleHint(false);

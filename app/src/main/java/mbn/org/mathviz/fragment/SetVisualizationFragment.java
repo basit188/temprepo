@@ -50,11 +50,14 @@ public class SetVisualizationFragment extends Fragment {
             case "division":
                 videoURI = Uri.parse("android.resource://" + getActivity().getPackageName()+"/"+R.raw.division_set);
                 break;
+            default:
+                videoURI = videoURI = Uri.parse("android.resource://" + getActivity().getPackageName()+"/"+R.raw.division_set);
+                break;
+
         }
     }
 
     public void onViewCreated(View v, Bundle b){
-        video_id = b.getString(VIDEO_ID);
         video = v.findViewById(R.id.vidSetVisualization);
         video.setVideoURI(videoURI);
         video.start();

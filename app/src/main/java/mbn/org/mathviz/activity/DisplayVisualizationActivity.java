@@ -33,19 +33,19 @@ public class DisplayVisualizationActivity extends AppCompatActivity {
 
         switch(visualization_id){
             case "addition":
-                setContentView(R.layout.activity_display_visualization_1);
+                setContentView(R.layout.activity_display_visualization_2);
                 setViewPager("addition");
                 break;
             case "subtraction":
-                setContentView(R.layout.activity_display_visualization_1);
+                setContentView(R.layout.activity_display_visualization_2);
                 setViewPager("subtraction");
                 break;
             case "multiplication":
-                setContentView(R.layout.activity_display_visualization_1);
+                setContentView(R.layout.activity_display_visualization_2);
                 setViewPager("multiplication");
                 break;
             case "division":
-                setContentView(R.layout.activity_display_visualization_1);
+                setContentView(R.layout.activity_display_visualization_2);
                 setViewPager("division");
                 break;
             default:
@@ -55,7 +55,8 @@ public class DisplayVisualizationActivity extends AppCompatActivity {
     }
 
     private void setViewPager(String vizualization_id){
-        mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager(),vizualization_id);
+        mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
+        mSectionsPagerAdapter.setVisualizationId(vizualization_id);
         mViewPager = findViewById(R.id.viewPagerDisplayVisualization);
         mViewPager.setAdapter(mSectionsPagerAdapter);
         tabVisualization = findViewById(R.id.tabVisualization);
@@ -76,9 +77,8 @@ public class DisplayVisualizationActivity extends AppCompatActivity {
             super(fm);
         }
 
-        public SectionsPagerAdapter(FragmentManager fm,String visualization_id) {
-            super(fm);
-            this.visualization_id = visualization_id;
+        public void setVisualizationId(String vid){
+            this.visualization_id = vid;
         }
 
         public Fragment getItem(int position) {
