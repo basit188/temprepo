@@ -27,15 +27,11 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         btnMathVizInfo.setOnClickListener(this);
     }
 
-    @Override
     public void onClick(View v) {
         MathVizInfoDialog mathVizInfoDialog = new MathVizInfoDialog();
         FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-        //FragmentTransaction transaction = fragmentManager.beginTransaction();
-        //transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
-        //transaction.add(android.R.id.content,mathVizInfoDialog).addToBackStack(null).commit();
-
         mathVizInfoDialog.show(fragmentManager,"InfoDialog");
 
     }
+
 }

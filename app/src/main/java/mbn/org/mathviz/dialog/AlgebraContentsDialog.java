@@ -35,7 +35,7 @@ public class AlgebraContentsDialog  extends DialogFragment implements View.OnCli
         cardArithmeticOperations.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ArthemeticOperationsDialog arthemeticOperationsDialog = new ArthemeticOperationsDialog();
+                ArithemeticOperationsDialog arthemeticOperationsDialog = new ArithemeticOperationsDialog();
                 arthemeticOperationsDialog.show(fragmentManager, "AODialog");
             }
         });

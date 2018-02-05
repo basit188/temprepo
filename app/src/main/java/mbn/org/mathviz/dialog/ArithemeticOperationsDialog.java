@@ -12,7 +12,7 @@ import android.widget.ImageView;
 import mbn.org.mathviz.R;
 import mbn.org.mathviz.activity.DisplayVisualizationActivity;
 
-public class ArthemeticOperationsDialog extends DialogFragment implements View.OnClickListener{
+public class ArithemeticOperationsDialog extends DialogFragment implements View.OnClickListener{
  CardView cardAddition, cardSubtraction,cardDivision,cardMultiplication;
 public final String VIDEO_ID = "VIDEO_ID";
 

@@ -45,6 +45,4 @@ public class AlgebraMainFragment extends Fragment implements View.OnClickListene
 
     }
 
-
-
 }
