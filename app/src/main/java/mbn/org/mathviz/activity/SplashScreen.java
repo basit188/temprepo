@@ -29,17 +29,6 @@ public class SplashScreen extends AppCompatActivity {
         imageView.setAnimation(fade);
         fade.start();
 
-
-
-
-
-
-      /*  ObjectAnimator animation = ObjectAnimator.ofFloat(imageView, "rotationY", 0.0f, 360f);
-        animation.setDuration(2000);
-        animation.setInterpolator(new AccelerateDecelerateInterpolator());
-       animation.start();*/
-
-
         new Handler().postDelayed(new Runnable() {
 
             /*
@@ -55,10 +44,6 @@ public class SplashScreen extends AppCompatActivity {
                 startActivity(new Intent(SplashScreen.this, MainActivity.class));
                 // close splash activity
                 finish();
-
-
-
-
 
             }
         }, SPLASH_TIME_OUT);

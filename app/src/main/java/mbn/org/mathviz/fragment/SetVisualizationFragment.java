@@ -27,13 +27,14 @@ public class SetVisualizationFragment extends Fragment {
         video.setVideoURI(Uri.parse("android.resource://" + getActivity().getPackageName()+"/"+R.raw.subtraction));
     }
 
-    public void onStop() {
-        super.onStop();
+    public void onPause() {
+        super.onPause();
         video.stopPlayback();
     }
 
-    public void onStart() {
-        super.onStart();
+    public void onResume() {
+        super.onResume();
+        video.setVideoURI(Uri.parse("android.resource://" + getActivity().getPackageName()+"/"+R.raw.addition));
         video.start();
     }
 }

@@ -23,15 +23,17 @@ public class NoLineVisualizationFragment extends Fragment {
     public void onViewCreated(View v, Bundle b){
         video = v.findViewById(R.id.vidLineVisualiation);
         video.setVideoURI(Uri.parse("android.resource://" + getActivity().getPackageName()+"/"+R.raw.addition));
+
     }
 
-    public void onStop() {
-        super.onStop();
+    public void onPause() {
+        super.onPause();
         video.stopPlayback();
     }
 
-    public void onStart() {
-        super.onStart();
+    public void onResume() {
+        super.onResume();
+        video.setVideoURI(Uri.parse("android.resource://" + getActivity().getPackageName()+"/"+R.raw.addition));
         video.start();
     }
 
