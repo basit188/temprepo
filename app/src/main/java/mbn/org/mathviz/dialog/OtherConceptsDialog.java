@@ -37,7 +37,7 @@ public class OtherConceptsDialog extends DialogFragment implements View.OnClickL
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getActivity(), DisplayVisualizationActivity.class);
-                i.putExtra(VIDEO_ID,"lcm");
+                i.putExtra(DisplayVisualizationActivity.VISUALIZATION_ID,"lcm");
                 getActivity().startActivity(i);
             }
         });
@@ -46,7 +46,7 @@ public class OtherConceptsDialog extends DialogFragment implements View.OnClickL
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getActivity(), DisplayVisualizationActivity.class);
-                i.putExtra(VIDEO_ID,"hcf");
+                i.putExtra(DisplayVisualizationActivity.VISUALIZATION_ID,"hcf");
                 getActivity().startActivity(i);
             }
         });
@@ -56,7 +56,7 @@ public class OtherConceptsDialog extends DialogFragment implements View.OnClickL
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getActivity(), DisplayVisualizationActivity.class);
-                i.putExtra(VIDEO_ID,"order_of_operations");
+                i.putExtra(DisplayVisualizationActivity.VISUALIZATION_ID,"order_of_operations");
                 getActivity().startActivity(i);
             }
         });
@@ -65,7 +65,7 @@ public class OtherConceptsDialog extends DialogFragment implements View.OnClickL
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getActivity(), DisplayVisualizationActivity.class);
-                i.putExtra(VIDEO_ID,"percentage");
+                i.putExtra(DisplayVisualizationActivity.VISUALIZATION_ID,"percentage");
                 getActivity().startActivity(i);
             }
         });

@@ -3,12 +3,15 @@ package mbn.org.mathviz.activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.VideoView;
 
 import mbn.org.mathviz.R;
@@ -16,13 +19,14 @@ import mbn.org.mathviz.fragment.NoLineVisualizationFragment;
 import mbn.org.mathviz.fragment.SetVisualizationFragment;
 
 
-public class DisplayVisualizationActivity extends AppCompatActivity {
-    private VideoView video,video2;
+public class DisplayVisualizationActivity extends AppCompatActivity implements OnClickListener {
+    private VideoView video;
     private SectionsPagerAdapter mSectionsPagerAdapter;
     private TabLayout tabVisualization;
     private ViewPager mViewPager;
+    private Uri videoUri;
+    FloatingActionButton fab;
     public static final String VISUALIZATION_ID = "VISUALIZATION_ID";
-
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +34,7 @@ public class DisplayVisualizationActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String visualization_id = intent.getStringExtra("VISUALIZATION_ID");
         video = findViewById(R.id.vidAddition);
+
 
         switch(visualization_id){
             case "addition":
@@ -47,6 +52,139 @@ public class DisplayVisualizationActivity extends AppCompatActivity {
             case "division":
                 setContentView(R.layout.activity_display_visualization_2);
                 setViewPager("division");
+                break;
+
+            case "natural_numbers":
+                setContentView(R.layout.activity_display_visualization_1);
+                fab = findViewById(R.id.fabAddition);
+                fab.setOnClickListener(this);
+                video = findViewById(R.id.vidAddition);
+                videoUri = Uri.parse("android.resource://" + getPackageName()+"/"+R.raw.natural_numbers);
+                video.setVideoURI(videoUri);
+                video.start();
+                break;
+
+            case "whole_numbers":
+                setContentView(R.layout.activity_display_visualization_1);
+                fab = findViewById(R.id.fabAddition);
+                fab.setOnClickListener(this);
+                video = findViewById(R.id.vidAddition);
+                videoUri = Uri.parse("android.resource://" + getPackageName()+"/"+R.raw.whole_numbers);
+                video.setVideoURI(videoUri);
+                video.start();
+                break;
+
+            case "integers":
+                setContentView(R.layout.activity_display_visualization_1);
+                fab = findViewById(R.id.fabAddition);
+                fab.setOnClickListener(this);
+                video = findViewById(R.id.vidAddition);
+                videoUri = Uri.parse("android.resource://" + getPackageName()+"/"+R.raw.integers);
+                video.setVideoURI(videoUri);
+                video.start();
+                break;
+            case "rational":
+                setContentView(R.layout.activity_display_visualization_1);
+                fab = findViewById(R.id.fabAddition);
+                fab.setOnClickListener(this);
+                video = findViewById(R.id.vidAddition);
+                videoUri = Uri.parse("android.resource://" + getPackageName()+"/"+R.raw.rational);
+                video.setVideoURI(videoUri);
+                video.start();
+                break;
+
+            case "irrational":
+                setContentView(R.layout.activity_display_visualization_1);
+                fab = findViewById(R.id.fabAddition);
+                fab.setOnClickListener(this);
+                video = findViewById(R.id.vidAddition);
+                videoUri = Uri.parse("android.resource://" + getPackageName()+"/"+R.raw.irrational);
+                video.setVideoURI(videoUri);
+                video.start();
+                break;
+            case "real_numbers":
+                setContentView(R.layout.activity_display_visualization_1);
+                fab = findViewById(R.id.fabAddition);
+                fab.setOnClickListener(this);
+                video = findViewById(R.id.vidAddition);
+                videoUri = Uri.parse("android.resource://" + getPackageName()+"/"+R.raw.real_numbers);
+                video.setVideoURI(videoUri);
+                video.start();
+                break;
+            case "pie":
+                setContentView(R.layout.activity_display_visualization_1);
+                fab = findViewById(R.id.fabAddition);
+                fab.setOnClickListener(this);
+                video = findViewById(R.id.vidAddition);
+                videoUri = Uri.parse("android.resource://" + getPackageName()+"/"+R.raw.pie);
+                video.setVideoURI(videoUri);
+                video.start();
+                break;
+
+            case "eulers":
+                setContentView(R.layout.activity_display_visualization_1);
+                fab = findViewById(R.id.fabAddition);
+                fab.setOnClickListener(this);
+                video = findViewById(R.id.vidAddition);
+                videoUri = Uri.parse("android.resource://" + getPackageName()+"/"+R.raw.eulers);
+                video.setVideoURI(videoUri);
+                video.start();
+                break;
+
+            case "even":
+                setContentView(R.layout.activity_display_visualization_1);
+                fab = findViewById(R.id.fabAddition);
+                fab.setOnClickListener(this);
+                video = findViewById(R.id.vidAddition);
+                videoUri = Uri.parse("android.resource://" + getPackageName()+"/"+R.raw.even);
+                video.setVideoURI(videoUri);
+                video.start();
+                break;
+            case "odd":
+                setContentView(R.layout.activity_display_visualization_1);
+                fab = findViewById(R.id.fabAddition);
+                fab.setOnClickListener(this);
+                video = findViewById(R.id.vidAddition);
+                videoUri = Uri.parse("android.resource://" + getPackageName()+"/"+R.raw.natural_numbers);
+                video.setVideoURI(videoUri);
+                video.start();
+                break;
+            case "hcf":
+                setContentView(R.layout.activity_display_visualization_1);
+                fab = findViewById(R.id.fabAddition);
+                fab.setOnClickListener(this);
+                video = findViewById(R.id.vidAddition);
+                videoUri = Uri.parse("android.resource://" + getPackageName()+"/"+R.raw.natural_numbers);
+                video.setVideoURI(videoUri);
+                video.start();
+                break;
+            case "lcm":
+                setContentView(R.layout.activity_display_visualization_1);
+                fab = findViewById(R.id.fabAddition);
+                fab.setOnClickListener(this);
+                video = findViewById(R.id.vidAddition);
+                videoUri = Uri.parse("android.resource://" + getPackageName()+"/"+R.raw.natural_numbers);
+                video.setVideoURI(videoUri);
+                video.start();
+                break;
+            case "order_of_operations":
+                setContentView(R.layout.activity_display_visualization_1);
+                fab = findViewById(R.id.fabAddition);
+                fab.setOnClickListener(this);
+                video = findViewById(R.id.vidAddition);
+                videoUri = Uri.parse("android.resource://" + getPackageName()+"/"+R.raw.natural_numbers);
+                video.setVideoURI(videoUri);
+                video.start();
+                break;
+
+            case "percentage":
+                setContentView(R.layout.activity_display_visualization_1);
+                fab = findViewById(R.id.fabAddition);
+                fab.setOnClickListener(this);
+                video = findViewById(R.id.vidAddition);
+                videoUri = Uri.parse("android.resource://" + getPackageName()+"/"+R.raw.natural_numbers);
+                video.setVideoURI(videoUri);
+                video.start();
                 break;
             default:
                 setContentView(R.layout.activity_display_visualization_1);
@@ -69,6 +207,13 @@ public class DisplayVisualizationActivity extends AppCompatActivity {
             public void onTabReselected(TabLayout.Tab tab) {}
         });
     }
+
+    @Override
+    public void onClick(View v) {
+        video.setVideoURI(videoUri);
+        video.start();
+    }
+
 
     public class SectionsPagerAdapter extends FragmentPagerAdapter {
         String visualization_id;

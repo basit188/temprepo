@@ -37,7 +37,7 @@ public class SpecialNumbersDialog extends DialogFragment implements View.OnClick
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getActivity(), DisplayVisualizationActivity.class);
-                i.putExtra(VIDEO_ID,"eulers");
+                i.putExtra(DisplayVisualizationActivity.VISUALIZATION_ID,"eulers");
                 getActivity().startActivity(i);
             }
         });
@@ -46,7 +46,7 @@ public class SpecialNumbersDialog extends DialogFragment implements View.OnClick
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getActivity(), DisplayVisualizationActivity.class);
-                i.putExtra(VIDEO_ID,"pie");
+                i.putExtra(DisplayVisualizationActivity.VISUALIZATION_ID,"pie");
                 getActivity().startActivity(i);
             }
         });
@@ -56,7 +56,7 @@ public class SpecialNumbersDialog extends DialogFragment implements View.OnClick
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getActivity(), DisplayVisualizationActivity.class);
-                i.putExtra(VIDEO_ID,"even");
+                i.putExtra(DisplayVisualizationActivity.VISUALIZATION_ID,"even");
                 getActivity().startActivity(i);
             }
         });
@@ -65,7 +65,7 @@ public class SpecialNumbersDialog extends DialogFragment implements View.OnClick
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getActivity(), DisplayVisualizationActivity.class);
-                i.putExtra(VIDEO_ID,"odd");
+                i.putExtra(DisplayVisualizationActivity.VISUALIZATION_ID,"odd");
                 getActivity().startActivity(i);
             }
         });

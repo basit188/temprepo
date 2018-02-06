@@ -38,7 +38,7 @@ public class EvolutionOfNumbersDialog extends DialogFragment implements View.OnC
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getActivity(), DisplayVisualizationActivity.class);
-                i.putExtra(VIDEO_ID,"natural_numbers");
+                i.putExtra(DisplayVisualizationActivity.VISUALIZATION_ID,"natural_numbers");
                 getActivity().startActivity(i);
             }
         });
@@ -47,7 +47,7 @@ public class EvolutionOfNumbersDialog extends DialogFragment implements View.OnC
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getActivity(), DisplayVisualizationActivity.class);
-                i.putExtra(VIDEO_ID,"whole_numbers");
+                i.putExtra(DisplayVisualizationActivity.VISUALIZATION_ID,"whole_numbers");
                 getActivity().startActivity(i);
             }
         });
@@ -57,7 +57,7 @@ public class EvolutionOfNumbersDialog extends DialogFragment implements View.OnC
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getActivity(), DisplayVisualizationActivity.class);
-                i.putExtra(VIDEO_ID,"integers");
+                i.putExtra(DisplayVisualizationActivity.VISUALIZATION_ID,"integers");
                 getActivity().startActivity(i);
             }
         });
@@ -66,7 +66,7 @@ public class EvolutionOfNumbersDialog extends DialogFragment implements View.OnC
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getActivity(), DisplayVisualizationActivity.class);
-                i.putExtra(VIDEO_ID,"rational");
+                i.putExtra(DisplayVisualizationActivity.VISUALIZATION_ID,"rational");
                 getActivity().startActivity(i);
             }
         });
@@ -75,7 +75,7 @@ public class EvolutionOfNumbersDialog extends DialogFragment implements View.OnC
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getActivity(), DisplayVisualizationActivity.class);
-                i.putExtra(VIDEO_ID,"irrational");
+                i.putExtra(DisplayVisualizationActivity.VISUALIZATION_ID,"irrational");
                 getActivity().startActivity(i);
             }
         });
@@ -84,7 +84,7 @@ public class EvolutionOfNumbersDialog extends DialogFragment implements View.OnC
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getActivity(), DisplayVisualizationActivity.class);
-                i.putExtra(VIDEO_ID,"real_numbers");
+                i.putExtra(DisplayVisualizationActivity.VISUALIZATION_ID,"real_numbers");
                 getActivity().startActivity(i);
             }
         });
