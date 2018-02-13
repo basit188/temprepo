@@ -145,7 +145,7 @@ public class DisplayVisualizationActivity extends AppCompatActivity implements O
                 fab = findViewById(R.id.fabAddition);
                 fab.setOnClickListener(this);
                 video = findViewById(R.id.vidAddition);
-                videoUri = Uri.parse("android.resource://" + getPackageName()+"/"+R.raw.natural_numbers);
+                videoUri = Uri.parse("android.resource://" + getPackageName()+"/"+R.raw.odd_numbers);
                 video.setVideoURI(videoUri);
                 video.start();
                 break;
@@ -154,7 +154,7 @@ public class DisplayVisualizationActivity extends AppCompatActivity implements O
                 fab = findViewById(R.id.fabAddition);
                 fab.setOnClickListener(this);
                 video = findViewById(R.id.vidAddition);
-                videoUri = Uri.parse("android.resource://" + getPackageName()+"/"+R.raw.natural_numbers);
+                videoUri = Uri.parse("android.resource://" + getPackageName()+"/"+R.raw.hcf);
                 video.setVideoURI(videoUri);
                 video.start();
                 break;
@@ -163,7 +163,7 @@ public class DisplayVisualizationActivity extends AppCompatActivity implements O
                 fab = findViewById(R.id.fabAddition);
                 fab.setOnClickListener(this);
                 video = findViewById(R.id.vidAddition);
-                videoUri = Uri.parse("android.resource://" + getPackageName()+"/"+R.raw.natural_numbers);
+                videoUri = Uri.parse("android.resource://" + getPackageName()+"/"+R.raw.lcm);
                 video.setVideoURI(videoUri);
                 video.start();
                 break;
@@ -172,7 +172,7 @@ public class DisplayVisualizationActivity extends AppCompatActivity implements O
                 fab = findViewById(R.id.fabAddition);
                 fab.setOnClickListener(this);
                 video = findViewById(R.id.vidAddition);
-                videoUri = Uri.parse("android.resource://" + getPackageName()+"/"+R.raw.natural_numbers);
+                videoUri = Uri.parse("android.resource://" + getPackageName()+"/"+R.raw.order_of_operations);
                 video.setVideoURI(videoUri);
                 video.start();
                 break;
@@ -182,7 +182,7 @@ public class DisplayVisualizationActivity extends AppCompatActivity implements O
                 fab = findViewById(R.id.fabAddition);
                 fab.setOnClickListener(this);
                 video = findViewById(R.id.vidAddition);
-                videoUri = Uri.parse("android.resource://" + getPackageName()+"/"+R.raw.natural_numbers);
+                videoUri = Uri.parse("android.resource://" + getPackageName()+"/"+R.raw.percentage);
                 video.setVideoURI(videoUri);
                 video.start();
                 break;
